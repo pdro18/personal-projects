@@ -18,7 +18,7 @@ int main(void)
     else
     {
         int middle = arraySize / 2;
-        int result = binarySearch(middle, target, sortedArray);
+        int result = binarySearch(target, middle, sortedArray);
         
         if (result == 0)
         {
@@ -43,12 +43,12 @@ int binarySearch(int middle, int target, int arr[])
             x = 1;
         }
         middle += x;
-        return binarySearch(middle, target, arr);
+        return binarySearch(target, middle, arr);
     }
     else if (target < arr[middle])
     {
         middle /= 2;
-        return binarySearch(middle, target, arr);
+        return binarySearch(target, middle, arr);
     }
 
     return 1;
